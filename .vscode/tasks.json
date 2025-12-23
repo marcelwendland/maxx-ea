@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "run-backtest-bat",
+			"type": "shell",
+			"command": "cmd.exe",
+			"args": [
+				"/c",
+				"E:\\work\\trading\\MT5\\MQL5\\Experts\\Advisors\\maxx\\maxx_test\\optimization\\backtest_automation.bat"
+			],
+			"isBackground": false
+		}
+	]
+}

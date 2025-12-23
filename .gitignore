@@ -1,0 +1,625 @@
+Experts/Advisors/ExpertMACD.ex5
+Experts/Advisors/ExpertMACD.mq5
+Experts/Advisors/ExpertMAMA.ex5
+Experts/Advisors/ExpertMAMA.mq5
+Experts/Advisors/ExpertMAPSAR.ex5
+Experts/Advisors/ExpertMAPSAR.mq5
+Experts/Advisors/ExpertMAPSARSizeOptimized.ex5
+Experts/Advisors/ExpertMAPSARSizeOptimized.mq5
+compile_log.txt
+experts.dat
+Experts/Advisors/maxx/desktop.ini
+Experts/Examples/ChartInChart/ChartInChart.ex5
+Experts/Examples/ChartInChart/ChartInChart.mq5
+Experts/Examples/Controls/Controls.ex5
+Experts/Examples/Controls/Controls.mq5
+Experts/Examples/Controls/ControlsDialog.mqh
+Experts/Examples/Correlation Matrix 3D/Correlation Matrix 3D.ex5
+Experts/Examples/Correlation Matrix 3D/Correlation Matrix 3D.mq5
+Experts/Examples/Correlation Matrix 3D/Correlation Matrix 3D.mqproj
+Experts/Examples/MACD/MACD Sample.ex5
+Experts/Examples/MACD/MACD Sample.mq5
+Experts/Examples/Math 3D/Functions.mqh
+Experts/Examples/Math 3D/Math 3D.ex5
+Experts/Examples/Math 3D/Math 3D.ico
+Experts/Examples/Math 3D/Math 3D.mq5
+Experts/Examples/Math 3D/Math 3D.mqproj
+Experts/Examples/Math 3D/Sets/Chomolungma.set
+Experts/Examples/Math 3D/Sets/ClimberDream.set
+Experts/Examples/Math 3D/Sets/DoubleScrew.set
+Experts/Examples/Math 3D/Sets/Granite.set
+Experts/Examples/Math 3D/Sets/Hedgehog.set
+Experts/Examples/Math 3D/Sets/Hill.set
+Experts/Examples/Math 3D/Sets/Josephine.set
+Experts/Examples/Math 3D/Sets/MultyExtremalScrew.set
+Experts/Examples/Math 3D/Sets/Screw.set
+Experts/Examples/Math 3D/Sets/Sink.set
+Experts/Examples/Math 3D/Sets/Skin.set
+Experts/Examples/Math 3D/Sets/Trapfall.set
+Experts/Examples/Math 3D Morpher/Functions.mqh
+Experts/Examples/Math 3D Morpher/Math 3D Morpher.ex5
+Experts/Examples/Math 3D Morpher/Math 3D Morpher.mq5
+Experts/Examples/Math 3D Morpher/Math 3D Morpher.mqproj
+Experts/Examples/Math 3D Morpher/Textures/checker.bmp
+Experts/Examples/Moving Average/Moving Average.ex5
+Experts/Examples/Moving Average/Moving Average.mq5
+Experts/Free Robots/BlackCrows WhiteSoldiers CCI.ex5
+Experts/Free Robots/BlackCrows WhiteSoldiers CCI.mq5
+Experts/Free Robots/BlackCrows WhiteSoldiers MFI.ex5
+Experts/Free Robots/BlackCrows WhiteSoldiers MFI.mq5
+Experts/Free Robots/BlackCrows WhiteSoldiers RSI.ex5
+Experts/Free Robots/BlackCrows WhiteSoldiers RSI.mq5
+Experts/Free Robots/BlackCrows WhiteSoldiers Stoch.ex5
+Experts/Free Robots/BlackCrows WhiteSoldiers Stoch.mq5
+Experts/Free Robots/BullishBearish Engulfing CCI.ex5
+Experts/Free Robots/BullishBearish Engulfing CCI.mq5
+Experts/Free Robots/BullishBearish Engulfing MFI.ex5
+Experts/Free Robots/BullishBearish Engulfing MFI.mq5
+Experts/Free Robots/BullishBearish Engulfing RSI.ex5
+Experts/Free Robots/BullishBearish Engulfing RSI.mq5
+Experts/Free Robots/BullishBearish Engulfing Stoch.ex5
+Experts/Free Robots/BullishBearish Engulfing Stoch.mq5
+Experts/Free Robots/BullishBearish Harami CCI.ex5
+Experts/Free Robots/BullishBearish Harami CCI.mq5
+Experts/Free Robots/BullishBearish Harami MFI.ex5
+Experts/Free Robots/BullishBearish Harami MFI.mq5
+Experts/Free Robots/BullishBearish Harami RSI.ex5
+Experts/Free Robots/BullishBearish Harami RSI.mq5
+Experts/Free Robots/BullishBearish Harami Stoch.ex5
+Experts/Free Robots/BullishBearish Harami Stoch.mq5
+Experts/Free Robots/BullishBearish MeetingLines CCI.ex5
+Experts/Free Robots/BullishBearish MeetingLines CCI.mq5
+Experts/Free Robots/BullishBearish MeetingLines MFI.ex5
+Experts/Free Robots/BullishBearish MeetingLines MFI.mq5
+Experts/Free Robots/BullishBearish MeetingLines RSI.ex5
+Experts/Free Robots/BullishBearish MeetingLines RSI.mq5
+Experts/Free Robots/BullishBearish MeetingLines Stoch.ex5
+Experts/Free Robots/BullishBearish MeetingLines Stoch.mq5
+Experts/Free Robots/DarkCloud PiercingLine CCI.ex5
+Experts/Free Robots/DarkCloud PiercingLine CCI.mq5
+Experts/Free Robots/DarkCloud PiercingLine MFI.ex5
+Experts/Free Robots/DarkCloud PiercingLine MFI.mq5
+Experts/Free Robots/DarkCloud PiercingLine RSI.ex5
+Experts/Free Robots/DarkCloud PiercingLine RSI.mq5
+Experts/Free Robots/DarkCloud PiercingLine Stoch.ex5
+Experts/Free Robots/DarkCloud PiercingLine Stoch.mq5
+Experts/Free Robots/HangingMan Hammer CCI.ex5
+Experts/Free Robots/HangingMan Hammer CCI.mq5
+Experts/Free Robots/HangingMan Hammer MFI.ex5
+Experts/Free Robots/HangingMan Hammer MFI.mq5
+Experts/Free Robots/HangingMan Hammer RSI.ex5
+Experts/Free Robots/HangingMan Hammer RSI.mq5
+Experts/Free Robots/HangingMan Hammer Stoch.ex5
+Experts/Free Robots/HangingMan Hammer Stoch.mq5
+Experts/Free Robots/MorningEvening StarDoji CCI.ex5
+Experts/Free Robots/MorningEvening StarDoji CCI.mq5
+Experts/Free Robots/MorningEvening StarDoji MFI.ex5
+Experts/Free Robots/MorningEvening StarDoji MFI.mq5
+Experts/Free Robots/MorningEvening StarDoji RSI.ex5
+Experts/Free Robots/MorningEvening StarDoji RSI.mq5
+Experts/Free Robots/MorningEvening StarDoji Stoch.ex5
+Experts/Free Robots/MorningEvening StarDoji Stoch.mq5
+Images/dollar.bmp
+Images/euro.bmp
+Include/MovingAverages.mqh
+Include/Object.mqh
+Include/StdLibErr.mqh
+Include/VirtualKeys.mqh
+Include/Arrays/Array.mqh
+Include/Arrays/ArrayChar.mqh
+Include/Arrays/ArrayColor.mqh
+Include/Arrays/ArrayDatetime.mqh
+Include/Arrays/ArrayDouble.mqh
+Include/Arrays/ArrayFloat.mqh
+Include/Arrays/ArrayInt.mqh
+Include/Arrays/ArrayLong.mqh
+Include/Arrays/ArrayObj.mqh
+Include/Arrays/ArrayShort.mqh
+Include/Arrays/ArrayString.mqh
+Include/Arrays/ArrayUChar.mqh
+Include/Arrays/ArrayUInt.mqh
+Include/Arrays/ArrayULong.mqh
+Include/Arrays/ArrayUShort.mqh
+Include/Arrays/List.mqh
+Include/Arrays/Tree.mqh
+Include/Arrays/TreeNode.mqh
+Include/Canvas/Canvas.mqh
+Include/Canvas/Canvas3D.mqh
+Include/Canvas/FlameCanvas.mqh
+Include/Canvas/Charts/ChartCanvas.mqh
+Include/Canvas/Charts/HistogramChart.mqh
+Include/Canvas/Charts/LineChart.mqh
+Include/Canvas/Charts/PieChart.mqh
+Include/Canvas/DX/DXBox.mqh
+Include/Canvas/DX/DXBuffers.mqh
+Include/Canvas/DX/DXData.mqh
+Include/Canvas/DX/DXDispatcher.mqh
+Include/Canvas/DX/DXHandle.mqh
+Include/Canvas/DX/DXInput.mqh
+Include/Canvas/DX/DXMath.mqh
+Include/Canvas/DX/DXMesh.mqh
+Include/Canvas/DX/DXObject.mqh
+Include/Canvas/DX/DXObjectBase.mqh
+Include/Canvas/DX/DXShader.mqh
+Include/Canvas/DX/DXSurface.mqh
+Include/Canvas/DX/DXTexture.mqh
+Include/Canvas/DX/DXUtils.mqh
+Include/Canvas/DX/Shaders/DefaultShaderPixel.hlsl
+Include/Canvas/DX/Shaders/DefaultShaderVertex.hlsl
+Include/ChartObjects/ChartObject.mqh
+Include/ChartObjects/ChartObjectPanel.mqh
+Include/ChartObjects/ChartObjectsArrows.mqh
+Include/ChartObjects/ChartObjectsBmpControls.mqh
+Include/ChartObjects/ChartObjectsChannels.mqh
+Include/ChartObjects/ChartObjectsElliott.mqh
+Include/ChartObjects/ChartObjectsFibo.mqh
+Include/ChartObjects/ChartObjectsGann.mqh
+Include/ChartObjects/ChartObjectsLines.mqh
+Include/ChartObjects/ChartObjectsShapes.mqh
+Include/ChartObjects/ChartObjectsTxtControls.mqh
+Include/ChartObjects/ChartObjectSubChart.mqh
+Include/Charts/Chart.mqh
+Include/Controls/BmpButton.mqh
+Include/Controls/Button.mqh
+Include/Controls/CheckBox.mqh
+Include/Controls/CheckGroup.mqh
+Include/Controls/ComboBox.mqh
+Include/Controls/DateDropList.mqh
+Include/Controls/DatePicker.mqh
+Include/Controls/Defines.mqh
+Include/Controls/Dialog.mqh
+Include/Controls/Edit.mqh
+Include/Controls/Label.mqh
+Include/Controls/ListView.mqh
+Include/Controls/Panel.mqh
+Include/Controls/Picture.mqh
+Include/Controls/RadioButton.mqh
+Include/Controls/RadioGroup.mqh
+Include/Controls/Rect.mqh
+Include/Controls/Scrolls.mqh
+Include/Controls/SpinEdit.mqh
+Include/Controls/Wnd.mqh
+Include/Controls/WndClient.mqh
+Include/Controls/WndContainer.mqh
+Include/Controls/WndObj.mqh
+Include/Controls/res/CheckBoxOff.bmp
+Include/Controls/res/CheckBoxOn.bmp
+Include/Controls/res/Close.bmp
+Include/Controls/res/DateDropOff.bmp
+Include/Controls/res/DateDropOn.bmp
+Include/Controls/res/Down.bmp
+Include/Controls/res/DownTransp.bmp
+Include/Controls/res/DropOff.bmp
+Include/Controls/res/DropOn.bmp
+Include/Controls/res/Left.bmp
+Include/Controls/res/LeftTransp.bmp
+Include/Controls/res/RadioButtonOff.bmp
+Include/Controls/res/RadioButtonOn.bmp
+Include/Controls/res/Restore.bmp
+Include/Controls/res/Right.bmp
+Include/Controls/res/RightTransp.bmp
+Include/Controls/res/SpinDec.bmp
+Include/Controls/res/SpinInc.bmp
+Include/Controls/res/ThumbHor.bmp
+Include/Controls/res/ThumbVert.bmp
+Include/Controls/res/Turn.bmp
+Include/Controls/res/Up.bmp
+Include/Controls/res/UpTransp.bmp
+Include/Expert/Expert.mqh
+Include/Expert/ExpertBase.mqh
+Include/Expert/ExpertMoney.mqh
+Include/Expert/ExpertSignal.mqh
+Include/Expert/ExpertTrade.mqh
+Include/Expert/ExpertTrailing.mqh
+Include/Expert/Money/MoneyFixedLot.mqh
+Include/Expert/Money/MoneyFixedMargin.mqh
+Include/Expert/Money/MoneyFixedRisk.mqh
+Include/Expert/Money/MoneyNone.mqh
+Include/Expert/Money/MoneySizeOptimized.mqh
+Include/Expert/Signal/SignalAC.mqh
+Include/Expert/Signal/SignalAMA.mqh
+Include/Expert/Signal/SignalAO.mqh
+Include/Expert/Signal/SignalBearsPower.mqh
+Include/Expert/Signal/SignalBullsPower.mqh
+Include/Expert/Signal/SignalCCI.mqh
+Include/Expert/Signal/SignalDEMA.mqh
+Include/Expert/Signal/SignalDeMarker.mqh
+Include/Expert/Signal/SignalEnvelopes.mqh
+Include/Expert/Signal/SignalFrAMA.mqh
+Include/Expert/Signal/SignalITF.mqh
+Include/Expert/Signal/SignalMA.mqh
+Include/Expert/Signal/SignalMACD.mqh
+Include/Expert/Signal/SignalRSI.mqh
+Include/Expert/Signal/SignalRVI.mqh
+Include/Expert/Signal/SignalSAR.mqh
+Include/Expert/Signal/SignalStoch.mqh
+Include/Expert/Signal/SignalTEMA.mqh
+Include/Expert/Signal/SignalTRIX.mqh
+Include/Expert/Signal/SignalWPR.mqh
+Include/Expert/Trailing/TrailingFixedPips.mqh
+Include/Expert/Trailing/TrailingMA.mqh
+Include/Expert/Trailing/TrailingNone.mqh
+Include/Expert/Trailing/TrailingParabolicSAR.mqh
+Include/Files/File.mqh
+Include/Files/FileBin.mqh
+Include/Files/FileBMP.mqh
+Include/Files/FilePipe.mqh
+Include/Files/FileTxt.mqh
+Include/Generic/ArrayList.mqh
+Include/Generic/HashMap.mqh
+Include/Generic/HashSet.mqh
+Include/Generic/LinkedList.mqh
+Include/Generic/Queue.mqh
+Include/Generic/RedBlackTree.mqh
+Include/Generic/SortedMap.mqh
+Include/Generic/SortedSet.mqh
+Include/Generic/Stack.mqh
+Include/Generic/Interfaces/ICollection.mqh
+Include/Generic/Interfaces/IComparable.mqh
+Include/Generic/Interfaces/IComparer.mqh
+Include/Generic/Interfaces/IEqualityComparable.mqh
+Include/Generic/Interfaces/IEqualityComparer.mqh
+Include/Generic/Interfaces/IList.mqh
+Include/Generic/Interfaces/IMap.mqh
+Include/Generic/Interfaces/ISet.mqh
+Include/Generic/Internal/ArrayFunction.mqh
+Include/Generic/Internal/CompareFunction.mqh
+Include/Generic/Internal/DefaultComparer.mqh
+Include/Generic/Internal/DefaultEqualityComparer.mqh
+Include/Generic/Internal/EqualFunction.mqh
+Include/Generic/Internal/HashFunction.mqh
+Include/Generic/Internal/Introsort.mqh
+Include/Generic/Internal/PrimeGenerator.mqh
+Include/Graphics/Axis.mqh
+Include/Graphics/ColorGenerator.mqh
+Include/Graphics/Curve.mqh
+Include/Graphics/Graphic.mqh
+Include/Indicators/BillWilliams.mqh
+Include/Indicators/Custom.mqh
+Include/Indicators/Indicator.mqh
+Include/Indicators/Indicators.mqh
+Include/Indicators/Oscilators.mqh
+Include/Indicators/Series.mqh
+Include/Indicators/TimeSeries.mqh
+Include/Indicators/Trend.mqh
+Include/Indicators/Volumes.mqh
+Include/Math/Alglib/alglib.mqh
+Include/Math/Alglib/alglibinternal.mqh
+Include/Math/Alglib/alglibmisc.mqh
+Include/Math/Alglib/ap.mqh
+Include/Math/Alglib/arrayresize.mqh
+Include/Math/Alglib/bitconvert.mqh
+Include/Math/Alglib/dataanalysis.mqh
+Include/Math/Alglib/delegatefunctions.mqh
+Include/Math/Alglib/diffequations.mqh
+Include/Math/Alglib/fasttransforms.mqh
+Include/Math/Alglib/integration.mqh
+Include/Math/Alglib/interpolation.mqh
+Include/Math/Alglib/linalg.mqh
+Include/Math/Alglib/matrix.mqh
+Include/Math/Alglib/optimization.mqh
+Include/Math/Alglib/solvers.mqh
+Include/Math/Alglib/specialfunctions.mqh
+Include/Math/Alglib/statistics.mqh
+Include/Math/Fuzzy/dictionary.mqh
+Include/Math/Fuzzy/fuzzyrule.mqh
+Include/Math/Fuzzy/fuzzyterm.mqh
+Include/Math/Fuzzy/fuzzyvariable.mqh
+Include/Math/Fuzzy/genericfuzzysystem.mqh
+Include/Math/Fuzzy/helper.mqh
+Include/Math/Fuzzy/inferencemethod.mqh
+Include/Math/Fuzzy/mamdanifuzzysystem.mqh
+Include/Math/Fuzzy/membershipfunction.mqh
+Include/Math/Fuzzy/ruleparser.mqh
+Include/Math/Fuzzy/sugenofuzzysystem.mqh
+Include/Math/Fuzzy/sugenovariable.mqh
+Include/Math/Stat/Beta.mqh
+Include/Math/Stat/Binomial.mqh
+Include/Math/Stat/Cauchy.mqh
+Include/Math/Stat/ChiSquare.mqh
+Include/Math/Stat/Exponential.mqh
+Include/Math/Stat/F.mqh
+Include/Math/Stat/Gamma.mqh
+Include/Math/Stat/Geometric.mqh
+Include/Math/Stat/Hypergeometric.mqh
+Include/Math/Stat/Logistic.mqh
+Include/Math/Stat/Lognormal.mqh
+Include/Math/Stat/Math.mqh
+Include/Math/Stat/NegativeBinomial.mqh
+Include/Math/Stat/NoncentralBeta.mqh
+Include/Math/Stat/NoncentralChiSquare.mqh
+Include/Math/Stat/NoncentralF.mqh
+Include/Math/Stat/NoncentralT.mqh
+Include/Math/Stat/Normal.mqh
+Include/Math/Stat/Poisson.mqh
+Include/Math/Stat/Stat.mqh
+Include/Math/Stat/T.mqh
+Include/Math/Stat/Uniform.mqh
+Include/Math/Stat/Weibull.mqh
+Include/OpenCL/OpenCL.mqh
+Include/Strings/String.mqh
+Include/Tools/DateTime.mqh
+Include/Trade/AccountInfo.mqh
+Include/Trade/DealInfo.mqh
+Include/Trade/HistoryOrderInfo.mqh
+Include/Trade/OrderInfo.mqh
+Include/Trade/PositionInfo.mqh
+Include/Trade/SymbolInfo.mqh
+Include/Trade/TerminalInfo.mqh
+Include/Trade/Trade.mqh
+Include/WinAPI/errhandlingapi.mqh
+Include/WinAPI/fileapi.mqh
+Include/WinAPI/handleapi.mqh
+Include/WinAPI/libloaderapi.mqh
+Include/WinAPI/memoryapi.mqh
+Include/WinAPI/processenv.mqh
+Include/WinAPI/processthreadsapi.mqh
+Include/WinAPI/securitybaseapi.mqh
+Include/WinAPI/sysinfoapi.mqh
+Include/WinAPI/winapi.mqh
+Include/WinAPI/winbase.mqh
+Include/WinAPI/windef.mqh
+Include/WinAPI/wingdi.mqh
+Include/WinAPI/winnt.mqh
+Include/WinAPI/winreg.mqh
+Include/WinAPI/winuser.mqh
+Indicators/Examples/Accelerator.ex5
+Indicators/Examples/Accelerator.mq5
+Indicators/Examples/AD.ex5
+Indicators/Examples/AD.mq5
+Indicators/Examples/ADX.ex5
+Indicators/Examples/ADX.mq5
+Indicators/Examples/ADXW.ex5
+Indicators/Examples/ADXW.mq5
+Indicators/Examples/Alligator.ex5
+Indicators/Examples/Alligator.mq5
+Indicators/Examples/AMA.ex5
+Indicators/Examples/AMA.mq5
+Indicators/Examples/ASI.ex5
+Indicators/Examples/ASI.mq5
+Indicators/Examples/ATR.ex5
+Indicators/Examples/ATR.mq5
+Indicators/Examples/Awesome_Oscillator.ex5
+Indicators/Examples/Awesome_Oscillator.mq5
+Indicators/Examples/BB.ex5
+Indicators/Examples/BB.mq5
+Indicators/Examples/Bears.ex5
+Indicators/Examples/Bears.mq5
+Indicators/Examples/Bulls.ex5
+Indicators/Examples/Bulls.mq5
+Indicators/Examples/BW-ZoneTrade.ex5
+Indicators/Examples/BW-ZoneTrade.mq5
+Indicators/Examples/CCI.ex5
+Indicators/Examples/CCI.mq5
+Indicators/Examples/CHO.ex5
+Indicators/Examples/CHO.mq5
+Indicators/Examples/CHV.ex5
+Indicators/Examples/CHV.mq5
+Indicators/Examples/ColorBars.ex5
+Indicators/Examples/ColorBars.mq5
+Indicators/Examples/ColorCandlesDaily.ex5
+Indicators/Examples/ColorCandlesDaily.mq5
+Indicators/Examples/ColorLine.ex5
+Indicators/Examples/ColorLine.mq5
+Indicators/Examples/Custom Moving Average.ex5
+Indicators/Examples/Custom Moving Average.mq5
+Indicators/Examples/DEMA.ex5
+Indicators/Examples/DEMA.mq5
+Indicators/Examples/DeMarker.ex5
+Indicators/Examples/DeMarker.mq5
+Indicators/Examples/DPO.ex5
+Indicators/Examples/DPO.mq5
+Indicators/Examples/Envelopes.ex5
+Indicators/Examples/Envelopes.mq5
+Indicators/Examples/Force_Index.ex5
+Indicators/Examples/Force_Index.mq5
+Indicators/Examples/Fractals.ex5
+Indicators/Examples/Fractals.mq5
+Indicators/Examples/FrAMA.ex5
+Indicators/Examples/FrAMA.mq5
+Indicators/Examples/Gator_2.ex5
+Indicators/Examples/Gator_2.mq5
+Indicators/Examples/Gator.ex5
+Indicators/Examples/Gator.mq5
+Indicators/Examples/Heiken_Ashi.ex5
+Indicators/Examples/Heiken_Ashi.mq5
+Indicators/Examples/Ichimoku.ex5
+Indicators/Examples/Ichimoku.mq5
+Indicators/Examples/MACD.ex5
+Indicators/Examples/MACD.mq5
+Indicators/Examples/MarketFacilitationIndex.ex5
+Indicators/Examples/MarketFacilitationIndex.mq5
+Indicators/Examples/MFI.ex5
+Indicators/Examples/MFI.mq5
+Indicators/Examples/MI.ex5
+Indicators/Examples/MI.mq5
+Indicators/Examples/Momentum.ex5
+Indicators/Examples/Momentum.mq5
+Indicators/Examples/OBV.ex5
+Indicators/Examples/OBV.mq5
+Indicators/Examples/OsMA.ex5
+Indicators/Examples/OsMA.mq5
+Indicators/Examples/ParabolicSAR.ex5
+Indicators/Examples/ParabolicSAR.mq5
+Indicators/Examples/Price_Channel.ex5
+Indicators/Examples/Price_Channel.mq5
+Indicators/Examples/PVT.ex5
+Indicators/Examples/PVT.mq5
+Indicators/Examples/ROC.ex5
+Indicators/Examples/ROC.mq5
+Indicators/Examples/RSI.ex5
+Indicators/Examples/RSI.mq5
+Indicators/Examples/RVI.ex5
+Indicators/Examples/RVI.mq5
+Indicators/Examples/StdDev.ex5
+Indicators/Examples/StdDev.mq5
+Indicators/Examples/Stochastic.ex5
+Indicators/Examples/Stochastic.mq5
+Indicators/Examples/TEMA.ex5
+Indicators/Examples/TEMA.mq5
+Indicators/Examples/TRIX.ex5
+Indicators/Examples/TRIX.mq5
+Indicators/Examples/Ultimate_Oscillator.ex5
+Indicators/Examples/Ultimate_Oscillator.mq5
+Indicators/Examples/VIDYA.ex5
+Indicators/Examples/VIDYA.mq5
+Indicators/Examples/Volumes.ex5
+Indicators/Examples/Volumes.mq5
+Indicators/Examples/VROC.ex5
+Indicators/Examples/VROC.mq5
+Indicators/Examples/W_AD.ex5
+Indicators/Examples/W_AD.mq5
+Indicators/Examples/WPR.ex5
+Indicators/Examples/WPR.mq5
+Indicators/Examples/ZigZag.ex5
+Indicators/Examples/ZigZag.mq5
+Indicators/Examples/ZigzagColor.ex5
+Indicators/Examples/ZigzagColor.mq5
+Indicators/Examples/Canvas/FlameChart.ex5
+Indicators/Examples/Canvas/FlameChart.mq5
+Indicators/Examples/Panels/ChartPanel/ChartPanel.ex5
+Indicators/Examples/Panels/ChartPanel/ChartPanel.mq5
+Indicators/Examples/Panels/ChartPanel/PanelDialog.mqh
+Indicators/Examples/Panels/SimplePanel/PanelDialog.mqh
+Indicators/Examples/Panels/SimplePanel/SimplePanel.ex5
+Indicators/Examples/Panels/SimplePanel/SimplePanel.mq5
+Indicators/Free Indicators/Camarilla Channel.ex5
+Indicators/Free Indicators/Camarilla Channel.mq5
+Indicators/Free Indicators/DeMark Channel.ex5
+Indicators/Free Indicators/DeMark Channel.mq5
+Indicators/Free Indicators/Donchian Channel.ex5
+Indicators/Free Indicators/Donchian Channel.mq5
+Indicators/Free Indicators/Fibonacci Channel.ex5
+Indicators/Free Indicators/Fibonacci Channel.mq5
+Indicators/Free Indicators/Keltner Channel.ex5
+Indicators/Free Indicators/Keltner Channel.mq5
+Indicators/Free Indicators/MarketProfile Canvas.ex5
+Indicators/Free Indicators/MarketProfile Canvas.mq5
+Indicators/Free Indicators/MarketProfile.ex5
+Indicators/Free Indicators/MarketProfile.mq5
+Indicators/Free Indicators/MurreyMath Channel.ex5
+Indicators/Free Indicators/MurreyMath Channel.mq5
+Indicators/Free Indicators/NRTR Channel.ex5
+Indicators/Free Indicators/NRTR Channel.mq5
+Indicators/Free Indicators/Parabolic Channel.ex5
+Indicators/Free Indicators/Parabolic Channel.mq5
+Indicators/Free Indicators/Pivot Channel.ex5
+Indicators/Free Indicators/Pivot Channel.mq5
+Indicators/Free Indicators/Woodie Channel.ex5
+Indicators/Free Indicators/Woodie Channel.mq5
+Profiles/Charts/British Pound/chart01.chr
+Profiles/Charts/British Pound/chart02.chr
+Profiles/Charts/British Pound/chart03.chr
+Profiles/Charts/British Pound/chart04.chr
+Profiles/Charts/British Pound/order.wnd
+Profiles/Charts/Default/chart01.chr
+Profiles/Charts/Default/chart02.chr
+Profiles/Charts/Default/chart03.chr
+Profiles/Charts/Default/chart04.chr
+Profiles/Charts/Default/chart05.chr
+Profiles/Charts/Default/chart06.chr
+Profiles/Charts/Default/chart07.chr
+Profiles/Charts/Default/order.wnd
+Profiles/Charts/Euro/chart01.chr
+Profiles/Charts/Euro/chart02.chr
+Profiles/Charts/Euro/chart03.chr
+Profiles/Charts/Euro/chart04.chr
+Profiles/Charts/Euro/order.wnd
+Profiles/Charts/Market Overview/chart01.chr
+Profiles/Charts/Market Overview/chart02.chr
+Profiles/Charts/Market Overview/chart03.chr
+Profiles/Charts/Market Overview/chart04.chr
+Profiles/Charts/Market Overview/order.wnd
+Profiles/SymbolSets/forex.all.set
+Profiles/SymbolSets/forex.crosses.set
+Profiles/SymbolSets/forex.major.set
+Profiles/Templates/ADX.tpl
+Profiles/Templates/BollingerBands.tpl
+Profiles/Templates/Momentum.tpl
+Profiles/Tester/EUUSD.ini
+Profiles/Tester/maxx_test.EURUSD.H1.last_year.000.ini
+Profiles/Tester/maxx_test.EURUSD.H1.last_year.010.ini
+Profiles/Tester/maxx_test.GERMANY40.H1.20250501_20251219.000.ini
+Profiles/Tester/maxx_test.GERMANY40.H1.last_year.000.ini
+Profiles/Tester/maxx_test.GERMANY40.H1.last_year.010.ini
+Profiles/Tester/maxx_test.set
+Profiles/Tester/Moving Average.set
+Profiles/Tester/ReportOptimizer-58662403.xml
+Scripts/Examples/AccountInfo/AccountInfoSample.ex5
+Scripts/Examples/AccountInfo/AccountInfoSample.mq5
+Scripts/Examples/AccountInfo/AccountInfoSampleInit.mqh
+Scripts/Examples/ArrayDouble/ArrayDoubleSample.ex5
+Scripts/Examples/ArrayDouble/ArrayDoubleSample.mq5
+Scripts/Examples/Canvas/CanvasSample.ex5
+Scripts/Examples/Canvas/CanvasSample.mq5
+Scripts/Examples/Canvas/Charts/HistogramChartSample.ex5
+Scripts/Examples/Canvas/Charts/HistogramChartSample.mq5
+Scripts/Examples/Canvas/Charts/LineChartSample.ex5
+Scripts/Examples/Canvas/Charts/LineChartSample.mq5
+Scripts/Examples/Canvas/Charts/PieChartSample.ex5
+Scripts/Examples/Canvas/Charts/PieChartSample.mq5
+Scripts/Examples/ObjectChart/ChartSampleInit.mqh
+Scripts/Examples/ObjectChart/ObjChartSample.ex5
+Scripts/Examples/ObjectChart/ObjChartSample.mq5
+Scripts/Examples/ObjectSphere/Sphere.mqh
+Scripts/Examples/ObjectSphere/SphereSample.ex5
+Scripts/Examples/ObjectSphere/SphereSample.mq5
+Scripts/Examples/OpenCL/Double/BitonicSort.ex5
+Scripts/Examples/OpenCL/Double/BitonicSort.mq5
+Scripts/Examples/OpenCL/Double/FFT.ex5
+Scripts/Examples/OpenCL/Double/FFT.mq5
+Scripts/Examples/OpenCL/Double/MatrixMult.ex5
+Scripts/Examples/OpenCL/Double/MatrixMult.mq5
+Scripts/Examples/OpenCL/Double/Wavelet.ex5
+Scripts/Examples/OpenCL/Double/Wavelet.mq5
+Scripts/Examples/OpenCL/Double/Kernels/bitonicsort.cl
+Scripts/Examples/OpenCL/Double/Kernels/fft.cl
+Scripts/Examples/OpenCL/Double/Kernels/matrixmult.cl
+Scripts/Examples/OpenCL/Double/Kernels/wavelet.cl
+Scripts/Examples/OpenCL/Float/BitonicSort.ex5
+Scripts/Examples/OpenCL/Float/BitonicSort.mq5
+Scripts/Examples/OpenCL/Float/FFT.ex5
+Scripts/Examples/OpenCL/Float/FFT.mq5
+Scripts/Examples/OpenCL/Float/MatrixMult.ex5
+Scripts/Examples/OpenCL/Float/MatrixMult.mq5
+Scripts/Examples/OpenCL/Float/Wavelet.ex5
+Scripts/Examples/OpenCL/Float/Wavelet.mq5
+Scripts/Examples/OpenCL/Float/Kernels/bitonicsort.cl
+Scripts/Examples/OpenCL/Float/Kernels/fft.cl
+Scripts/Examples/OpenCL/Float/Kernels/matrixmult.cl
+Scripts/Examples/OpenCL/Float/Kernels/wavelet.cl
+Scripts/Examples/OpenCL/Seascape/Seascape.cl
+Scripts/Examples/OpenCL/Seascape/Seascape.ex5
+Scripts/Examples/OpenCL/Seascape/Seascape.mq5
+Scripts/Examples/OpenCL/Seascape/Seascape.mqproj
+Scripts/Examples/OrderInfo/OrderInfoSample.ex5
+Scripts/Examples/OrderInfo/OrderInfoSample.mq5
+Scripts/Examples/OrderInfo/OrderInfoSampleInit.mqh
+Scripts/Examples/PositionInfo/PositionInfoSample.ex5
+Scripts/Examples/PositionInfo/PositionInfoSample.mq5
+Scripts/Examples/PositionInfo/PositionInfoSampleInit.mqh
+Scripts/Examples/Remnant 3D/Remnant 3D.ex5
+Scripts/Examples/Remnant 3D/Remnant 3D.mq5
+Scripts/Examples/Remnant 3D/Remnant 3D.mqproj
+Scripts/Examples/Remnant 3D/Shaders/pixel.hlsl
+Scripts/Examples/Remnant 3D/Shaders/vertex.hlsl
+Scripts/Examples/SymbolInfo/SymbolInfoSample.ex5
+Scripts/Examples/SymbolInfo/SymbolInfoSample.mq5
+Scripts/Examples/SymbolInfo/SymbolInfoSampleInit.mqh
+Scripts/UnitTests/Alglib/TestClasses.mq5
+Scripts/UnitTests/Alglib/TestClasses.mqh
+Scripts/UnitTests/Alglib/TestInterfaces.mq5
+Scripts/UnitTests/Alglib/TestInterfaces.mqh
+Scripts/UnitTests/Fuzzy/TestFuzzy.mq5
+Scripts/UnitTests/Generic/TestArrayList.mq5
+Scripts/UnitTests/Generic/TestHashMap.mq5
+Scripts/UnitTests/Generic/TestHashSet.mq5
+Scripts/UnitTests/Generic/TestLinkedList.mq5
+Scripts/UnitTests/Generic/TestQueue.mq5
+Scripts/UnitTests/Generic/TestRedBlackTree.mq5
+Scripts/UnitTests/Generic/TestSortedMap.mq5
+Scripts/UnitTests/Generic/TestSortedSet.mq5
+Scripts/UnitTests/Generic/TestStack.mq5
+Scripts/UnitTests/Stat/TestStat.mq5
+Scripts/UnitTests/Stat/TestStatBenchmark.mq5
+Scripts/UnitTests/Stat/TestStatPrecision.mq5
