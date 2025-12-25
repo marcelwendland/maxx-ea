@@ -24,14 +24,9 @@ int OnInit()
   
    //--- Initialize order management
    Orders::Init();
+   TrendDetector::Init(Symbol(), Period()); 
+   Strategy::Init(Symbol(), Period());
    
-   //--- Initialize strategy indicators
-   if(!Strategy::Init(Symbol(), Period()))
-   {
-      Log::Error("Failed to initialize strategy");
-      return(INIT_FAILED);
-   }
-
    return(INIT_SUCCEEDED);
 }
 
@@ -65,10 +60,9 @@ bool ProcessNewBar()
 void OnTick()
 {
    //--- Only process on new bar
-   if(!ProcessNewBar())
-      return;
+   if(!ProcessNewBar()) return;
 
-   Strategy::checkforEntry();
+   Strategy::CheckForEntry();
    ZigZag::Update();
 }
 

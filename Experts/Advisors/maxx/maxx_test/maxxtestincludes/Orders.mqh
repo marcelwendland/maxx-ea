@@ -3,8 +3,6 @@
 //|                                       Step-by-Step Learning EA   |
 //|                                                                  |
 //+------------------------------------------------------------------+
-#property copyright "Maxx"
-#property strict
 
 #include <Trade/Trade.mqh>
 #include "Log.mqh"

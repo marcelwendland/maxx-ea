@@ -3,14 +3,13 @@
 //|                                       Step-by-Step Learning EA   |
 //|                                                                  |
 //+------------------------------------------------------------------+
-#property copyright "Maxx"
-
 #include "Log.mqh"
 #include "Params.mqh"
 #include "Draw.mqh"
 #include "Orders.mqh"
 #include "TrendDetector.mqh"
 #include "ZigZag.mqh"
+#include "Types.mqh"
 
 //+------------------------------------------------------------------+
 //| Swing callback (global scope to work with function pointers)     |
@@ -33,6 +32,7 @@ namespace Strategy
    const int MA_BUFFER_SIZE = 3;
    const int SIGNAL_BAR_INDEX = 1;  // Use bar index 1 (closed bar) for signals
    const int PREV_BAR_INDEX = 2;    // Previous bar index
+
    
    //--- MA indicator handles
    int fastMAHandle  = INVALID_HANDLE;
@@ -45,32 +45,15 @@ namespace Strategy
    double lastSwingPrice = 0.0;
    int lastSwingBarIndex = 0;
    bool lastSwingIsHigh = false;
-   
-   //--- Trend detector instance
-   CTrendDetector trendDetector;
-   
-   //--- Signal enumeration
-   enum SIGNAL_TYPE
-   {
-      SIGNAL_NONE = 0,
-      SIGNAL_BUY  = 1,
-      SIGNAL_SELL = -1
-   };
-   
+  
+         
    //+------------------------------------------------------------------+
    //| Initialize indicators                                           |
    //+------------------------------------------------------------------+
    bool Init(const string symbol, ENUM_TIMEFRAMES timeframe)
    {
       currentTimeframe = timeframe;
-      
-      //--- Validate ATR is enabled (required for swing strategy)
-      if(!InpUseATR)
-      {
-         Log::Error("ATR must be enabled (InpUseATR = true) for Swing HIGH/LOW SL strategy");
-         return false;
-      }
-      
+          
       //--- Create ATR indicator
       atrHandle = iATR(symbol, timeframe, InpATR_Period);
       if(atrHandle == INVALID_HANDLE)
@@ -91,7 +74,7 @@ namespace Strategy
       ZigZag::SetOnNewSwingCallback(OnNewSwingConfirmed);
       
       //--- Create Fast MA indicator (10) - for crossover signals
-      fastMAHandle = iMA(symbol, timeframe, InpMA_FastPeriod, 0, InpMA_Method, InpMA_AppliedPrice);
+      fastMAHandle = iMA(symbol, timeframe, InpMA_FastPeriod, 0, MA_Method, InpMA_AppliedPrice);
       if(fastMAHandle == INVALID_HANDLE)
       {
          Log::Error(StringFormat("Failed to create Fast MA indicator. Error: %d", GetLastError()));
@@ -102,7 +85,7 @@ namespace Strategy
       }
       
       //--- Create Mid MA indicator (20) - for crossover signals
-      midMAHandle = iMA(symbol, timeframe, InpMA_MidPeriod, 0, InpMA_Method, InpMA_AppliedPrice);
+      midMAHandle = iMA(symbol, timeframe, InpMA_MidPeriod, 0, MA_Method, InpMA_AppliedPrice);
       if(midMAHandle == INVALID_HANDLE)
       {
          Log::Error(StringFormat("Failed to create Mid MA indicator. Error: %d", GetLastError()));
@@ -110,35 +93,6 @@ namespace Strategy
          ZigZag::Deinit();
          IndicatorRelease(atrHandle);
          fastMAHandle = atrHandle = INVALID_HANDLE;
-         return false;
-      }
-      
-      //--- Create Slow MA indicator (50) - for trend filtering
-      slowMAHandle = iMA(symbol, timeframe, InpMA_SlowPeriod, 0, InpMA_Method, InpMA_AppliedPrice);
-      if(slowMAHandle == INVALID_HANDLE)
-      {
-         Log::Error(StringFormat("Failed to create Slow MA indicator. Error: %d", GetLastError()));
-         IndicatorRelease(fastMAHandle);
-         IndicatorRelease(midMAHandle);
-         ZigZag::Deinit();
-         IndicatorRelease(atrHandle);
-         fastMAHandle = midMAHandle = atrHandle = INVALID_HANDLE;
-         return false;
-      }
-      
-      Log::Info(StringFormat("MAs initialized: Fast=%d, Mid=%d, Slow=%d, Method=%s", 
-                InpMA_FastPeriod, InpMA_MidPeriod, InpMA_SlowPeriod, EnumToString(InpMA_Method)));
-      
-      //--- Initialize TrendDetector with shared MA handles
-      if(!trendDetector.Init(symbol, timeframe, fastMAHandle, midMAHandle, slowMAHandle, atrHandle, 5))
-      {
-         Log::Error("Failed to initialize TrendDetector");
-         IndicatorRelease(fastMAHandle);
-         IndicatorRelease(midMAHandle);
-         IndicatorRelease(slowMAHandle);
-         IndicatorRelease(atrHandle);
-         ZigZag::Deinit();
-         fastMAHandle = midMAHandle = slowMAHandle = atrHandle = INVALID_HANDLE;
          return false;
       }
       
@@ -150,7 +104,7 @@ namespace Strategy
    //+------------------------------------------------------------------+
    void Deinit()
    {
-      trendDetector.Deinit();
+   
       Draw::DeleteTrendPanel();
 
       //--- Unregister callback before ZigZag shutdown
@@ -299,61 +253,39 @@ namespace Strategy
    //+------------------------------------------------------------------+
    //| Process Entry Logic                                              |
    //+------------------------------------------------------------------+
-   void ProcessEntry()
+   void CheckForEntry()
    {
       SIGNAL_TYPE signal = CheckSignal();
-   
       if(signal == SIGNAL_NONE)
          return;
-   
+
+      //--- Trend filter: only trade in trend direction
+      if(!TrendDetector::IsTrendAligned(signal))
+         return;
+       
       //--- Only one position per direction
-      if(signal == SIGNAL_BUY && Orders::HasPosition(Symbol(), POSITION_TYPE_BUY))
+      if(Orders::HasPosition(Symbol(), (signal == SIGNAL_BUY) ? POSITION_TYPE_BUY : POSITION_TYPE_SELL))
          return;
-      if(signal == SIGNAL_SELL && Orders::HasPosition(Symbol(), POSITION_TYPE_SELL))
-         return;
-      
-      //--- Get entry price
-      double entryPrice = (signal == SIGNAL_BUY) ? 
-                          SymbolInfoDouble(Symbol(), SYMBOL_ASK) : 
-                          SymbolInfoDouble(Symbol(), SYMBOL_BID);
-      
-      //--- Use fixed lot size
+
       double lots = InpLotSize;
-      
-      //--- Calculate stop loss using ZigZag swing points + ATR
       double atr = GetATR();
       double stopLoss = 0.0;
-      
-      if(signal == SIGNAL_BUY)          
-            stopLoss = ZigZag::GetLastSwingLowPrice() - atr * InpATR_Multiplier;
-         
-      
-      else if(signal == SIGNAL_SELL)
-           stopLoss = ZigZag::GetLastSwingHighPrice() + atr * InpATR_Multiplier;
-      
-      
-      //--- Execute trade with stop loss
       bool success = false;
+
       if(signal == SIGNAL_BUY)
+      {
+         stopLoss = ZigZag::GetLastSwingLowPrice() - atr * InpATR_Multiplier;
          success = Orders::BuyMarket(Symbol(), lots, stopLoss);
+      }
       else if(signal == SIGNAL_SELL)
+      {
+         stopLoss = ZigZag::GetLastSwingHighPrice() + atr * InpATR_Multiplier;
          success = Orders::SellMarket(Symbol(), lots, stopLoss);
-      
-      if(!success)          
+      }
+
+      if(!success)
          Log::Error("Failed to execute trade");
-      
    }
-
-   //+------------------------------------------------------------------+
-   //| Refactor alias: entry check                                     |
-   //+------------------------------------------------------------------+
-   void checkforEntry()
-   {
-      ProcessEntry();
-   }
-
-   
-
    
 }
 //+------------------------------------------------------------------+

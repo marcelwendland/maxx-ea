@@ -1,11 +1,16 @@
 //+------------------------------------------------------------------+
 //| ZigZag.mqh - Step-by-Step Learning EA                            |
 //+------------------------------------------------------------------+
-#property copyright "Maxx"
 
 #include "Log.mqh"
 #include "Params.mqh"
 #include "Draw.mqh"
+
+//| ZigZag Settings for Swing Detection                             |
+//+------------------------------------------------------------------+
+const int MinBarsBeetweenSwings = 11;      // Minimum bars between detected swing highs/lows (higher = fewer swings)
+const int MinPriceMove         = 5;       // Minimum price movement (points) to qualify as a swing (higher = filter small moves)
+const int MinBarsBetweenPoints = 3;       // Minimum bars between any two swing points (prevents clustering)
 
 //+------------------------------------------------------------------+
 //| ZigZag Namespace - Handles ZigZag swing point detection          |
@@ -72,10 +77,11 @@ namespace ZigZag
         if (closedBarTime == bufferRefTime && cachedCopied > 0 && ArraySize(zigzagBuf) > 0)
             return true;
 
-        ArrayResize(zigzagBuf, InpZigZag_LookbackBars);
+      int LookbackBars = 20;
+        ArrayResize(zigzagBuf, LookbackBars);
         ArraySetAsSeries(zigzagBuf, true);
 
-        cachedCopied = CopyBuffer(handle, 0, 1, InpZigZag_LookbackBars, zigzagBuf);
+        cachedCopied = CopyBuffer(handle, 0, 1, LookbackBars, zigzagBuf);
         copyBufferCalls++;
 
         if (cachedCopied <= 0)
@@ -200,7 +206,7 @@ namespace ZigZag
 
         handle = iCustom(
             symbol, tf, "Examples\\ZigZag",
-            InpZigZag_Depth, InpZigZag_Deviation, InpZigZag_Backstep
+            InpMinBarsBetweenSwings, MinPriceMove, MinBarsBetweenPoints
         );
 
         if (handle == INVALID_HANDLE)
@@ -212,8 +218,8 @@ namespace ZigZag
         EnsureBufferUpdated();
 
         Log::Info(StringFormat(
-            "ZigZag initialized: Depth=%d, Deviation=%d, Backstep=%d, Cached=%d",
-            InpZigZag_Depth, InpZigZag_Deviation, InpZigZag_Backstep, cachedCopied
+            "ZigZag initialized: MinBarsBetweenSwings=%d, MinPriceMove=%d, MinBarsBetweenPoints=%d, Cached=%d",
+            InpMinBarsBetweenSwings, MinPriceMove, MinBarsBetweenPoints, cachedCopied
         ));
 
         double price;

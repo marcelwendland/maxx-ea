@@ -623,3 +623,17 @@ Scripts/UnitTests/Generic/TestStack.mq5
 Scripts/UnitTests/Stat/TestStat.mq5
 Scripts/UnitTests/Stat/TestStatBenchmark.mq5
 Scripts/UnitTests/Stat/TestStatPrecision.mq5
+Profiles/Charts/Default/chart08.chr
+Profiles/Charts/Default/chart09.chr
+Profiles/Charts/Default/chart10.chr
+Profiles/Charts/Default/chart11.chr
+Profiles/Tester/maxx_test.GERMANY40.H1.20230701_20251224.410.ini
+Profiles/Tester/maxx_test.GERMANY40.H1.last_year.410.ini
+Experts/Advisors/maxx/maxx_test/optimization/Trendfilter_on_off.xml
+Experts/Advisors/maxx/maxx_test/optimization/Trendfilter_on_off.csv
+Experts/Advisors/maxx/maxx_test/optimization/SL_ATR_mulitpluer.xml
+Experts/Advisors/maxx/maxx_test/optimization/Fast_Mid_Ma.xml
+Experts/Advisors/maxx/maxx_test/optimization/Fast_Mid_Ma_2023-2024.xml
+Experts/Advisors/maxx/maxx_test/optimization/Fast_Mid_Ma_2023-2024.csv
+Experts/Advisors/maxx/maxx_test/maxx_test.ex5
+Experts/Advisors/maxx/maxx_test/maxx_test.ex5
