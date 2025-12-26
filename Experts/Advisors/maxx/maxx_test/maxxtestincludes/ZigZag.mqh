@@ -142,10 +142,7 @@ namespace ZigZag
     //--- Check if a new swing (low or high) has been confirmed
     bool IsNewSwing(bool findLow, double &price, int &barIndex)
     {
-        if(barIndex <= 0 || price <= 0)
-            return false;
-
-        if (!FindSwingPoint(findLow, price, barIndex))
+         if (!FindSwingPoint(findLow, price, barIndex))
             return false;
 
         datetime swingTime = iTime(currentSymbol, timeframe, barIndex);

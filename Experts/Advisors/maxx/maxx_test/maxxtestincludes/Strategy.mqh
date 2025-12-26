@@ -250,35 +250,56 @@ namespace Strategy
    void CheckEntry()
    {
       SIGNAL_TYPE signal = CheckSignal();
+
       if(signal == SIGNAL_NONE)
          return;
 
+      Log::Info(StringFormat("Signal detected: %d", signal));
+
       //--- Trend filter: only trade in trend direction
-      if(!TrendDetector::IsTrendAligned(signal))
-         return;
-       
+      if(InpUseTrendFilter)
+      {
+         if(!TrendDetector::IsTrendAligned(signal))
+         {
+            Log::Info("Signal not aligned with trend. Skipping entry.");
+            return;
+         }
+      }
       //--- Only one position per direction
       if(Orders::HasPosition(Symbol(), (signal == SIGNAL_BUY) ? POSITION_TYPE_BUY : POSITION_TYPE_SELL))
+      {
+         Log::Info("Position already exists for this direction. Skipping entry.");
          return;
+      }
 
       double lots = InpLotSize;
       double atr = GetATR();
+      Log::Info(StringFormat("ATR value: %.2f", atr));
+
+      if(atr <= InpATR_Min)
+      {
+         Log::Info(StringFormat("ATR below minimum threshold (%.2f <= %d). Skipping entry.", atr, InpATR_Min));
+         return;
+      }
+
       double stopLoss = 0.0;
       bool success = false;
 
       if(signal == SIGNAL_BUY)
       {
          stopLoss = ZigZag::GetLastSwingLowPrice() - atr * InpATR_Multiplier;
+         Log::Info(StringFormat("Attempting BUY order. Stop Loss: %.2f", stopLoss));
          success = Orders::BuyMarket(Symbol(), lots, stopLoss);
       }
       else if(signal == SIGNAL_SELL)
       {
          stopLoss = ZigZag::GetLastSwingHighPrice() + atr * InpATR_Multiplier;
+         Log::Info(StringFormat("Attempting SELL order. Stop Loss: %.2f", stopLoss));
          success = Orders::SellMarket(Symbol(), lots, stopLoss);
       }
 
       if(!success)
-         Log::Error("Failed to execute trade");
+         Log::Error("Failed to execute trade.");
    }
    
 }

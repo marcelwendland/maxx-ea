@@ -40,6 +40,7 @@ input int      InpMA_MidPeriod         = 28;                                // M
 //+------------------------------------------------------------------+
 //| Indicator Settings - Trend Detector                              |     
 //+------------------------------------------------------------------+
+input bool     InpUseTrendFilter      = false; // Enable trend filter
 input double   InpTrend_MinSlopePts    = 20;   // Minimum slope in points (0 = old behavior)
 input int      InpMA_SlowPeriod        = 50;   // Slow MA Period (trend filter)
 
@@ -54,6 +55,7 @@ const ENUM_APPLIED_PRICE InpMA_AppliedPrice = PRICE_MEDIAN;                   //
 //+------------------------------------------------------------------+
 const int    InpATR_Period       = 13;       // ATR period
 const double InpATR_Multiplier   = 0.5;      // ATR multiplier for SL
+input double InpATR_Min    = 0;      // Minimum ATR in points to allow entries (0 = disabled)
 
 //+------------------------------------------------------------------+
 //ZigZag Settings are in ZigZag.mqh
