@@ -21,8 +21,6 @@
 //+------------------------------------------------------------------+
 int OnInit()
 {
-  
-   //--- Initialize order management
    Orders::Init();
    TrendDetector::Init(Symbol(), Period()); 
    Strategy::Init(Symbol(), Period());
@@ -36,7 +34,6 @@ int OnInit()
 void OnDeinit(const int reason)
 {
    Strategy::Deinit();
-
 }
 
 //+------------------------------------------------------------------+
@@ -59,11 +56,12 @@ bool ProcessNewBar()
 //+------------------------------------------------------------------+
 void OnTick()
 {
-   //--- Only process on new bar
-   if(!ProcessNewBar()) return;
+   
+   if(!ProcessNewBar()) return; //--- Only process on new bar
 
-   Strategy::CheckForEntry();
    ZigZag::Update();
+   Strategy::CheckEntry();
+   
 }
 
 

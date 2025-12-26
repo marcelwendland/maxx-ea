@@ -50,7 +50,14 @@ const ENUM_APPLIED_PRICE InpMA_AppliedPrice = PRICE_MEDIAN;                   //
 const int    InpATR_Period       = 13;       // ATR period
 const double InpATR_Multiplier   = 0.5;      // ATR multiplier for SL
 
-input int      InpMinBarsBetweenSwings = 11;  // Minimum bars between swings
+//+------------------------------------------------------------------+
+//ZigZag Settings are in ZigZag.mqh
+//+------------------------------------------------------------------+
+input int InpZigZag_LookbackBars = 20;             // Number of bars to look back for ZigZag calculation  
+input int InpZigZag_MinBarsBetweenSwings = 11;     // Minimum bars between detected swing highs/lows (higher = fewer swings)
+const int MinPriceMove         = 5;                // Minimum price movement (points) to qualify as a swing (higher = filter small moves)
+const int MinBarsBetweenPoints = 3;                // Minimum bars between any two swing points (prevents clustering)
+
 
 
 

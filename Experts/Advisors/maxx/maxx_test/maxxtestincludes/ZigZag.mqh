@@ -6,11 +6,6 @@
 #include "Params.mqh"
 #include "Draw.mqh"
 
-//| ZigZag Settings for Swing Detection                             |
-//+------------------------------------------------------------------+
-const int MinBarsBeetweenSwings = 11;      // Minimum bars between detected swing highs/lows (higher = fewer swings)
-const int MinPriceMove         = 5;       // Minimum price movement (points) to qualify as a swing (higher = filter small moves)
-const int MinBarsBetweenPoints = 3;       // Minimum bars between any two swing points (prevents clustering)
 
 //+------------------------------------------------------------------+
 //| ZigZag Namespace - Handles ZigZag swing point detection          |
@@ -77,11 +72,10 @@ namespace ZigZag
         if (closedBarTime == bufferRefTime && cachedCopied > 0 && ArraySize(zigzagBuf) > 0)
             return true;
 
-      int LookbackBars = 20;
-        ArrayResize(zigzagBuf, LookbackBars);
+        ArrayResize(zigzagBuf, InpZigZag_LookbackBars);
         ArraySetAsSeries(zigzagBuf, true);
 
-        cachedCopied = CopyBuffer(handle, 0, 1, LookbackBars, zigzagBuf);
+        cachedCopied = CopyBuffer(handle, 0, 1, InpZigZag_LookbackBars, zigzagBuf);
         copyBufferCalls++;
 
         if (cachedCopied <= 0)
@@ -127,7 +121,7 @@ namespace ZigZag
         {
             double v = zigzagBuf[i];
             // Use 0.0 for empty value if EMPTY_VALUE is not defined
-            if (v == 0.0 /*|| v == EMPTY_VALUE*/)
+            if (v == 0.0 || v == EMPTY_VALUE)
                 continue;
 
             int b = i + 1;
@@ -148,6 +142,9 @@ namespace ZigZag
     //--- Check if a new swing (low or high) has been confirmed
     bool IsNewSwing(bool findLow, double &price, int &barIndex)
     {
+        if(barIndex <= 0 || price <= 0)
+            return false;
+
         if (!FindSwingPoint(findLow, price, barIndex))
             return false;
 
@@ -206,7 +203,7 @@ namespace ZigZag
 
         handle = iCustom(
             symbol, tf, "Examples\\ZigZag",
-            InpMinBarsBetweenSwings, MinPriceMove, MinBarsBetweenPoints
+            InpZigZag_MinBarsBetweenSwings, MinPriceMove, MinBarsBetweenPoints
         );
 
         if (handle == INVALID_HANDLE)
@@ -219,7 +216,7 @@ namespace ZigZag
 
         Log::Info(StringFormat(
             "ZigZag initialized: MinBarsBetweenSwings=%d, MinPriceMove=%d, MinBarsBetweenPoints=%d, Cached=%d",
-            InpMinBarsBetweenSwings, MinPriceMove, MinBarsBetweenPoints, cachedCopied
+            InpZigZag_MinBarsBetweenSwings, MinPriceMove, MinBarsBetweenPoints, cachedCopied
         ));
 
         double price;

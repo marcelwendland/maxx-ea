@@ -20,11 +20,9 @@ void OnNewSwingConfirmed(bool isHigh, double swingPrice, int barIndex, datetime 
 //| Strategy Namespace - Moving Average Crossover Strategy           |
 //+------------------------------------------------------------------+
 //| 3-MA Setup:                                                      |
-//| - Fast MA (10): Entry signal (crossover)                         |
-//| - Mid MA (20):  Entry signal (crossover)                         |
-//| - Slow MA (50): Trend filtering (TrendDetector)                  |
 //| - BUY Signal: Fast MA crosses above Mid MA                       |
 //| - SELL Signal: Fast MA crosses below Mid MA                      |
+//| - Trend Filter: Slow MA direction                                |
 //+------------------------------------------------------------------+
 namespace Strategy
 {
@@ -194,8 +192,6 @@ namespace Strategy
 
       if(!OrderSend(req, res) || (res.retcode != TRADE_RETCODE_DONE && res.retcode != TRADE_RETCODE_DONE_PARTIAL))
          Log::Error(StringFormat("SL update failed. retcode=%d", (int)res.retcode));
-      else
-         Log::Info(StringFormat("SL updated (swing): %s pos=%I64u SL=%g", symbol, ticket, newSL));
    }
 
    //+------------------------------------------------------------------+
@@ -253,7 +249,7 @@ namespace Strategy
    //+------------------------------------------------------------------+
    //| Process Entry Logic                                              |
    //+------------------------------------------------------------------+
-   void CheckForEntry()
+   void CheckEntry()
    {
       SIGNAL_TYPE signal = CheckSignal();
       if(signal == SIGNAL_NONE)
