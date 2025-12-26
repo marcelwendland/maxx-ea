@@ -259,11 +259,12 @@ namespace Strategy
       //--- Trend filter: only trade in trend direction
       if(InpUseTrendFilter)
       {
-         if(!TrendDetector::IsTrendAligned(signal))
+        /* if(!TrendDetector::IsTrendAligned(signal))
          {
             Log::Info("Signal not aligned with trend. Skipping entry.");
             return;
          }
+            */
       }
       //--- Only one position per direction
       if(Orders::HasPosition(Symbol(), (signal == SIGNAL_BUY) ? POSITION_TYPE_BUY : POSITION_TYPE_SELL))

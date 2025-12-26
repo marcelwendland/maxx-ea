@@ -55,7 +55,7 @@ const ENUM_APPLIED_PRICE InpMA_AppliedPrice = PRICE_MEDIAN;                   //
 //+------------------------------------------------------------------+
 const int    InpATR_Period       = 13;       // ATR period
 const double InpATR_Multiplier   = 0.5;      // ATR multiplier for SL
-input double InpATR_Min    = 0;      // Minimum ATR in points to allow entries (0 = disabled)
+input int    InpATR_Min          = 50;       // Minimum Vola to trade (0 = disabled, 50 Dax40)
 
 //+------------------------------------------------------------------+
 //ZigZag Settings are in ZigZag.mqh
