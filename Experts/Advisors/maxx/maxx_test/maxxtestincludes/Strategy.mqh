@@ -103,8 +103,6 @@ namespace Strategy
    void Deinit()
    {
    
-      Draw::DeleteTrendPanel();
-
       //--- Unregister callback before ZigZag shutdown
       ZigZag::SetOnNewSwingCallback(NULL);
       ZigZag::Deinit();

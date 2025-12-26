@@ -42,29 +42,29 @@ namespace TrendDetector
    //+------------------------------------------------------------------+
    //| Check if trend is aligned with signal direction                 |
    //+------------------------------------------------------------------+
-   bool IsTrendAligned(const SIGNAL_TYPE signal)
-   {
+ bool IsTrendAligned(const SIGNAL_TYPE signal)
+{
       if(slowMAHandle == INVALID_HANDLE)
          return false;
 
       double slowMABuf[];
       ArraySetAsSeries(slowMABuf, true);
 
+      // Bar 1 = last closed bar, Bar 2 = previous closed bar
       if(CopyBuffer(slowMAHandle, 0, 1, 2, slowMABuf) != 2)
          return false;
 
-      //--- Determine trend direction
-      if(slowMABuf[1] < slowMABuf[0])
-      {
-         // Uptrend
-         return (signal == SIGNAL_BUY);
-      }
-      else if(slowMABuf[1] > slowMABuf[0])
-      {
-         // Downtrend
-         return (signal == SIGNAL_SELL);
-      }
+      //--- slope in points
+      const double slopePts = (slowMABuf[0] - slowMABuf[1]) / _Point;
+      const double minSlope = InpTrend_MinSlopePts;
 
-      //--- No clear trend
-      return false;
-   }
+      //--- Uptrend: slope sufficiently positive
+      if(signal == SIGNAL_BUY)
+         return (slopePts > minSlope);
+
+      //--- Downtrend: slope sufficiently negative
+      if(signal == SIGNAL_SELL)
+         return (slopePts < -minSlope);
+
+   return false;
+}

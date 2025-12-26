@@ -36,7 +36,12 @@ input int      InpMaxSpreadPoints      = 50;                                 // 
 //+------------------------------------------------------------------+
 input int      InpMA_FastPeriod        = 7;                                 // Fast MA Period (signal)
 input int      InpMA_MidPeriod         = 28;                                // Mid MA Period (signal)
-input int      InpMA_SlowPeriod        = 56;                                // Slow MA Period (trend filter)
+
+//+------------------------------------------------------------------+
+//| Indicator Settings - Trend Detector                              |     
+//+------------------------------------------------------------------+
+input double   InpTrend_MinSlopePts    = 20;   // Minimum slope in points (0 = old behavior)
+input int      InpMA_SlowPeriod        = 50;   // Slow MA Period (trend filter)
 
 
 // Fixed MA method and applied price for simplicity
